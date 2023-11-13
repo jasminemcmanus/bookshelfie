@@ -15,7 +15,6 @@ function App() {
       fetch("https://bookshelfie.onrender.com/books")
           .then((response) => response.json())
           .then((data) => {
-            console.log(data);
             setBookArray(data);
           });
       }, []);

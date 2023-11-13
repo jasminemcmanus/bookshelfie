@@ -11,10 +11,10 @@ function ReviewEntryForm({updateReview}) {
     useEffect(() => {
         fetch(`https://bookshelfie.onrender.com/books/${id}`)
             .then(r => r.json())
-            .then(data => testFunction(data))
+            .then(data => updatePage(data))
     }, [id])
     
-    function testFunction(data) {
+    function updatePage(data) {
         setBook(data);
         setPostContent(data.review)
     }
